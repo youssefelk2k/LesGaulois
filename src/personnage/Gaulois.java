@@ -34,4 +34,9 @@ public class Gaulois {
 		if (effetPotion<1)
 			effetPotion=1;
 	}
+	
+	public void boirPotion(int effetPotion) {
+		this.effetPotion=effetPotion;
+	}
+	
 }
