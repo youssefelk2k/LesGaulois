@@ -4,48 +4,31 @@ public class Romain {
 	private String nom;
 	private int force;
 
-	
-	
-
-	public Romain() {
-		super();
-		// TODO Auto-generated constructor stub
+	public Romain(String nom, int force) {
+		this.nom = nom;
+		this.force = force;
 	}
-
-
-
 
 	public String getNom() {
 		return nom;
 	}
 
-
-
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void parler(String texte) {
+		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
 
-
-
-
-	public int getForce() {
-		return force;
+	private String prendreParole() {
+		return "Le Romain " + nom + " : ";
 	}
 
-
-
-
-	public void setForce(int force) {
-		this.force = force;
+	public void recevoirCoup(int forceCoup) {
+		force -= forceCoup;
+		if (force < 1) {
+			force = 0;
+			parler("J'abandonne !");
+		} else {
+			parler("Aïe");
+		}
 	}
-
-
-
-
-	public void receoirCoup(int i) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
+
